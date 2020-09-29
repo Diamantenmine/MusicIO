@@ -14,6 +14,8 @@ posClick_y := 1080/2
 CoordMode, Mouse , Relative
 return
 
+; Controll Chrome
+
 NumpadIns & NumLock::
 Numpad0 & NumLock::
     toggleChromeHotkeys := !toggleChromeHotkeys
@@ -52,6 +54,16 @@ Numpad4::
 return
 #If
 
+; General usefull stuff
+
+SetCapsLockState, alwaysOff
+AppsKey::LWin
+LWin::return
+
+; Hotstrings e.g. E-Mail ::l@::luca@example.com
+
+
+
 
 sendKeyToYouTube(keyYT, keyYTMusic){
     IfWinExist, https://music.youtube.com/
@@ -79,3 +91,4 @@ d::
     MsgBox, The cursor is at X%xpos% Y%ypos%.
 return
 e::MsgBox, X%posClick_x% Y%posClick_y%
+#If
